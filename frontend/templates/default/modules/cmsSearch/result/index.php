@@ -20,6 +20,7 @@ use \yii\helpers\Url;
                 <? \skeeks\cms\modules\admin\widgets\Pjax::begin(); ?>
                 <?= \yii\jui\AutoComplete::widget([
                     'name' => \Yii::$app->cmsSearch->searchQueryParamName,
+                    'value' => \Yii::$app->cmsSearch->searchQuery,
                     'options' => [
                         'placeholder' => 'Поиск',
                         'class' => 'form-control',
