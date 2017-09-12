@@ -6,6 +6,8 @@
  * @date 06.03.2015
  */
 /* @var $this \yii\web\View */
+
+use \yii\helpers\Url;
 ?>
 
 <? /*= $this->render('@template/include/breadcrumbs', [
@@ -16,6 +18,16 @@
         <div class="row">
             <div class="col-md-12">
                 <? \skeeks\cms\modules\admin\widgets\Pjax::begin(); ?>
+                <?= \yii\jui\AutoComplete::widget([
+                    'name' => \Yii::$app->cmsSearch->searchQueryParamName,
+                    'options' => [
+                        'placeholder' => 'Поиск',
+                        'class' => 'form-control',
+                    ],
+                    'clientOptions' => [
+                        'source' => Url::to(['/search/autocomplete']),
+                    ]
+                ]); ?>
                 <div class="row">
                     <div class="col-md-12">
                         <form action="/search" method="get" data-pjax="true">
