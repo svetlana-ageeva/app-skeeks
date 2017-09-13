@@ -23,7 +23,12 @@ class SearchController extends Controller
 
         $term = Yii::$app->request->get('term');
 
-        $products = CmsContentElement::find()->where(['like','name',$term])->all();
+        $products = CmsContentElement::find()
+            ->where(['like',CmsContentElement::tableName().'.name',$term])
+            ->andWhere([CmsContentElement::tableName().'.active' => 'Y'])
+            ->joinWith('cmsContent as ccontent')
+            ->andWhere(['ccontent.code' => 'product'])
+            ->all();
 
         $arr = [];
         if($products)
