@@ -19,7 +19,7 @@ use \yii\helpers\Url;
             <div class="col-md-12">
                 <? \skeeks\cms\modules\admin\widgets\Pjax::begin(); ?>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 searcher">
                         <form action="/search" method="get" data-pjax="true">
                             <div class="input-group animated fadeInDown">
                                 <?= \yii\jui\AutoComplete::widget([
@@ -35,7 +35,7 @@ use \yii\helpers\Url;
                                 ]); ?>
                                 <span class="input-group-btn">
                                     <button class="btn btn-primary" type="button"
-                                            onclick="$('.search-open form').submit(); return false;">Искать
+                                            onclick="$('.searcher form').submit(); return false;">Искать
                                     </button>
                                 </span>
                             </div>
