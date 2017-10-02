@@ -39,6 +39,12 @@ section.page-header .breadcrumb
     margin-top: auto;
 }
 
+.owl-item div.shop-item img{
+	max-width:100%;
+	width:auto;
+	display:block;
+}
+
 div.row > div.shop-item img.img-responsive
 {
     max-height: 150px;
@@ -263,7 +269,7 @@ div.shop-item-summary h2
     margin-right: auto;
     background: white;
     max-width: 1200px;
-    padding: 0px 15px 0px 15px;
+   /*  padding: 0px 15px 0px 15px; */
 }
 
 #footer ul.footer-links > li > a, #footer a
@@ -309,6 +315,24 @@ div.shop-item-summary h2
     height: 60px;
 }
 
+
+@media(max-width: 992px){
+	.visible-xs.sx-top-logo-block{
+		text-align:left;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.visible-xs.sx-top-logo-block p{
+		margin-bottom:0;
+	}
+	.visible-xs.sx-top-logo-block img{
+		max-height:20px;
+		margin:7px 0 0 5px;
+	}
+ 		
+}
+
+
 p
 {
     margin-bottom: 10px;
@@ -334,6 +358,24 @@ div.side-nav ul > li:before
 {
     margin-top: 25px;
     margin-right: 10px;
+}
+
+
+@media(max-width: 992px){
+	 
+	#header ul.nav-second-main {
+		margin-top: 23px;
+		margin-right: 17px;
+	}
+	
+	#header ul.nav-second-main li {
+		padding: 0;
+		padding-top: 0px;
+	}		
+}
+
+#header ul.nav-second-main li>a{
+	padding: 0 10px;
 }
 
 #header.fixed #topNav .sx-menu-bg
@@ -658,7 +700,7 @@ h2.owl-featured
      white-space: nowrap;
      overflow: hidden;
      padding: 5px;
-     width: 230px;
+     width: 100%;
      display: block;
 }
 
@@ -679,4 +721,25 @@ h2.owl-featured
     padding-top: 40px;
     padding-bottom: 20px;
     border: none;
+}
+
+@media only screen and (max-width: 600px){
+	.owl-pagination {
+		display: block;
+		/* margin-top: 20px; */
+	}	
+}
+
+@media only screen and (max-width: 992px){
+	.header-contacts{
+		padding-top:60px;
+	}
+	#header {
+		height: 60px !important;
+		position:fixed;
+		top:0;
+		left: -15px;
+		right: -15px;
+		
+	}	
 }
